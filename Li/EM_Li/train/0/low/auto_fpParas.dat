@@ -1,0 +1,18 @@
+# FP type
+BP
+# Elements
+Li
+0.0 0.0
+# nG1s nG2s
+10 0
+#type centralElement neighborElement eta Rs Rc
+G1  Li Li 50 2.804 10.68
+G1  Li Li 50 2.937 10.68
+G1  Li Li 50 3.071 10.68
+G1  Li Li 50 3.204 10.68
+G1  Li Li 50 3.337 10.68
+G1  Li Li 50 3.471 10.68
+G1  Li Li 50 3.604 10.68
+G1  Li Li 50 3.738 10.68
+G1  Li Li 50 3.872 10.68
+G1  Li Li 50 4.005 10.68
