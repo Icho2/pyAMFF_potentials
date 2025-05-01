@@ -1,0 +1,18 @@
+# FP type
+BP
+# Elements
+Pt
+0.0 0.0
+# nG1s nG2s
+10 0
+#type centralElement neighborElement eta Rs Rc
+G1  Pt Pt 50 0.550 5.5
+G1  Pt Pt 50 1.100 5.5
+G1  Pt Pt 50 1.650 5.5
+G1  Pt Pt 50 2.200 5.5
+G1  Pt Pt 50 2.750 5.5
+G1  Pt Pt 50 3.300 5.5
+G1  Pt Pt 50 3.850 5.5
+G1  Pt Pt 50 4.400 5.5
+G1  Pt Pt 50 4.950 5.5
+G1  Pt Pt 50 5.500 5.5

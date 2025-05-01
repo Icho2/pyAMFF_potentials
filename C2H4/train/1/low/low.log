@@ -1,0 +1,46 @@
+nohup: ignoring input
+             Fingerprints used:
+             Type:  BP
+             H :  20 G1s
+             C :  20 G1s
+    0.07s: Processing training data
+             Number of training images: 570
+    0.74s: Trying to load training fingerprints
+             Fingerprints were not found
+    0.74s: Calculating training fingerprints
+    0.74s: Training
+Process Process-1:
+Traceback (most recent call last):
+  File "/opt/ohpc/pub/libs/python3-core/3.11.11/lib/python3.11/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/opt/ohpc/pub/libs/python3-core/3.11.11/lib/python3.11/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/ma62425/pyamff/pyamff/pyamff_runner.py", line 136, in init_fp_processes
+    dist.init_process_group("gloo", rank=rank, world_size=size, timeout=timeout)
+  File "/home/ma62425/.local/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 83, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ma62425/.local/lib/python3.11/site-packages/torch/distributed/c10d_logger.py", line 97, in wrapper
+    func_return = func(*args, **kwargs)
+                  ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ma62425/.local/lib/python3.11/site-packages/torch/distributed/distributed_c10d.py", line 1520, in init_process_group
+    store, rank, world_size = next(rendezvous_iterator)
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/ma62425/.local/lib/python3.11/site-packages/torch/distributed/rendezvous.py", line 269, in _env_rendezvous_handler
+    store = _create_c10d_store(
+            ^^^^^^^^^^^^^^^^^^^
+  File "/home/ma62425/.local/lib/python3.11/site-packages/torch/distributed/rendezvous.py", line 189, in _create_c10d_store
+    return TCPStore(
+           ^^^^^^^^^
+RuntimeError: The server socket has failed to listen on any local network address. port: 12355, useIpv6: 0, code: -98, name: EADDRINUSE, message: address already in use
+Traceback (most recent call last):
+  File "/home/ma62425/pyamff/bin/pyamff", line 4, in <module>
+    main()
+  File "/home/ma62425/pyamff/pyamff/main.py", line 15, in main
+    pyamff.run()
+  File "/home/ma62425/pyamff/pyamff/pyamff_runner.py", line 236, in run
+    self.calc_fingerprints()
+  File "/home/ma62425/pyamff/pyamff/pyamff_runner.py", line 831, in calc_fingerprints
+    with open(fname, "rb") as f:
+         ^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/home/ma62425/testing_fingerprints/C2H4/train/1/low/fingerprints/fprange.pckl'
